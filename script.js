@@ -34,8 +34,8 @@ app.put('/image',(req,res)=>{entries.handleEntries(req,res,db)})
 app.post('/imageurl',(req,res)=>{entries.handleApiCall(req,res)})
 
 
-app.listen(3000,()=>{
-	console.log('app is working')
+app.listen(process.env.PORT||3000,()=>{
+	console.log('app is working',process.env.PORT)
 })
 /*
 
